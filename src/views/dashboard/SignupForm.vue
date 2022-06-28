@@ -1,0 +1,159 @@
+<template>
+    <div>
+      <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-graduation-cap"></i>
+        <h1>Register to our courses</h1>
+        <p>W3docs provides free learning materials for programming languages like HTML, CSS, Java Script, PHP etc.</p>
+        <div class="btn-group">
+          <a class="btn-item" href="https://www.w3docs.com/learn-html.html">Learn HTML</a>
+          <a class="btn-item" href="https://www.w3docs.com/quiz/#">Select Quiz</a>
+        </div>
+      </div>
+      <form action="/">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Register here</h2>
+        </div>
+        <div class="infom">
+
+          <label class="fname">First Name:<span class="text-danger">*</span></label>
+          <input type="text" v-model="FirstName" class="form-control form-control-lg">  
+
+          <input class="fname" type="text" name="name" placeholder="Full name"><br>
+          <input type="text" name="name" placeholder="Email"><br>
+          <input type="text" name="name" placeholder="Phone number"><br>
+          <input type="password" name="name" placeholder="Password"><br>
+          <select>
+            <option value="course-type" selected>Course type*</option>
+            <option value="short-courses">Short courses</option>
+            <option value="featured-courses">Featured courses</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="diploma">Diploma</option>
+            <option value="certificate">Certificate</option>
+            <option value="masters-degree">Masters degree</option>
+            <option value="postgraduate">Postgraduate</option>
+          </select>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="checkbox"><span>I agree to the <a href="https://www.w3docs.com/privacy-policy">Privacy Poalicy for W3Docs.</a></span>
+        </div>
+        <button type="submit" href="/">Submit</button>
+      </form>
+    </div>
+    </div>
+</template>
+
+<script>
+
+</script>
+
+
+<style>
+      html, body {
+      min-height: 100%;
+      }
+     
+      
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5); 
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 72px;
+      }
+      form {
+      background: rgba(0, 0, 0, 0.7); 
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .infom {
+      display: flex;
+      flex-direction: column;
+      background-color:#fff; 
+    
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: 2px solid black;
+      border-bottom: 1px solid #eee;
+      width: 350px;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      }
+      .checkbox a {
+      color: #26a9e0;
+      }
+      .checkbox a:hover {
+      color: #85d6de;
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #26a9e0; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 100%;
+      }
+      button:hover, .btn-item:hover {
+      background: #85d6de;
+      }
+      @media (min-width: 568px) {
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part, form {
+      flex: 1;
+      height: auto;
+      }
+      }
+</style>
